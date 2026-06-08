@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xavier Saints — Cheer & Chant Library</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #111; color: #f0f0f0; min-height: 100vh; }
+  .hdr { background: #000; border-bottom: 2px solid #827554; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .hdr-title { font-size: 16px; font-weight: 600; color: #fff; }
+  .hdr-sub { font-size: 12px; color: #827554; }
+  .back { font-size: 12px; color: #827554; text-decoration: none; padding: 4px 10px; border: 1px solid #4a4030; border-radius: 99px; }
+  .back:hover { background: #1a1a1a; }
+  .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; padding: 14px 16px 8px; }
+  .filt { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; border: 1px solid #333; background: #1a1a1a; color: #888; cursor: pointer; transition: all .15s; }
+  .filt.on { background: #2a1e00; color: #a89060; border-color: #827554; }
+  .count { font-size: 12px; color: #555; padding: 0 16px 12px; }
+  .lib { padding: 0 16px 40px; }
+  .sec-div { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: #444; margin: 24px 0 10px; padding-bottom: 6px; border-bottom: 1px solid #1e1e1e; }
+  .card { background: #141414; border: 1px solid #2a2a2a; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  .card.hidden { display: none; }
+  .card-top { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .card-title { font-size: 15px; font-weight: 600; color: #fff; flex: 1; }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+  .b-cheer { background: #2a1e00; color: #a89060; border: 1px solid #4a4030; }
+  .b-chant { background: #1e1e1e; color: #888; border: 1px solid #333; }
+  .b-crowd { background: #0d3020; color: #60c090; border: 1px solid #1a6040; }
+  .b-sit   { background: #0a0a0a; color: #666; border: 1px solid #222; }
+  .lyrics { font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.9; color: #ddd; background: #0a0a0a; border-left: 3px solid #827554; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-bottom: 10px; white-space: pre-wrap; }
+  .motions-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #555; margin: 8px 0 5px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .pill { font-size: 11px; padding: 2px 9px; border-radius: 99px; background: #2a1e00; color: #a89060; border: 1px solid #4a4030; }
+  .tip { font-size: 12px; color: #888; background: #0e0e0e; border-left: 2px solid #827554; border-radius: 0 6px 6px 0; padding: 6px 10px; margin-top: 4px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="hdr-title">Cheer &amp; Chant Library — Xavier Saints</div>
+    <div class="hdr-sub">16 items · cheers, chants, crowd builders</div>
+  </div>
+  <a class="back" href="index.html">← Home</a>
+</div>
+
+<div class="filter-bar">
+  <button class="filt on" onclick="filter('all',this)">All</button>
+  <button class="filt" onclick="filter('cheer',this)">Cheers</button>
+  <button class="filt" onclick="filter('chant',this)">Chants</button>
+  <button class="filt" onclick="filter('crowd',this)">Crowd Builders</button>
+  <button class="filt" onclick="filter('intro',this)">Opener</button>
+  <button class="filt" onclick="filter('offense',this)">Offense</button>
+  <button class="filt" onclick="filter('defense',this)">Defense</button>
+  <button class="filt" onclick="filter('score',this)">After a Score</button>
+</div>
+<div class="count" id="count">16 items</div>
+
+<div class="lib" id="lib">
+
+<div class="sec-div" data-sec="cheer">Cheers</div>
+
+<div class="card" data-type="cheer" data-sit="intro">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">We Are the Saints</span><span class="badge b-sit">Opener</span></div>
+  <div class="lyrics">We are the Saints, the mighty, mighty Saints!
+Everywhere we go, people want to know
+Who we are — so we tell them:
+We are the Saints, the mighty, mighty Saints!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: High V on "Saints"</span><span class="pill">Line 2: T motion, arms out wide</span><span class="pill">Line 3: Point to crowd on "we tell them"</span><span class="pill">Line 4: Repeat High V, stomp on each "Saints"</span></div>
+  <div class="tip">8-count format. Great opener — teach it Day 2. Call-and-response feel gets the crowd involved naturally.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="intro">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">Black and Gold</span><span class="badge b-sit">Opener</span></div>
+  <div class="lyrics">Black and gold, that's our color!
+Xavier Saints, like no other!
+Fight! Fight! Fight for the win tonight!
+Black and gold — alright!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: Low V, punch up on "color"</span><span class="pill">Line 2: Daggers, then Broken T</span><span class="pill">Line 3: Three punches up on "Fight! Fight! Fight!"</span><span class="pill">Line 4: High V hold, clap on "alright"</span></div>
+  <div class="tip">Strong identity cheer — use at the start of games or after intros. Color reference ties it visually to uniforms.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="offense">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">Let's Go, Saints!</span><span class="badge b-sit">Offense</span></div>
+  <div class="lyrics">Let's go, Saints, let's go!
+Push it down the field / floor!
+Xavier's on the move —
+We're ready to score!
+Saints! Saints! Saints!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: T motion, clap between each word</span><span class="pill">Line 2: Both arms sweep forward (push motion)</span><span class="pill">Line 3: High V with march step</span><span class="pill">Line 4: Touchdown arms on "score"</span><span class="pill">Line 5: Three staccato punches, stomp each</span></div>
+  <div class="tip">Swap "field" for "floor" depending on sport. Versatile for football, basketball, soccer.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="offense">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">Victory Cheer</span><span class="badge b-sit">Offense</span></div>
+  <div class="lyrics">V-I-C-T-O-R-Y
+That's our Saints' battle cry!
+Fight on, fight hard, fight to win —
+Xavier, let's begin!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: Spell each letter with alternating motions (High V / T / Broken T)</span><span class="pill">Line 2: Clasp, then punch on "cry"</span><span class="pill">Line 3: Three alternating diagonal punches</span><span class="pill">Line 4: Low V, then burst into High V on "begin"</span></div>
+  <div class="tip">Spelling cheers are great for beginners — slow enough to execute cleanly, crowd joins the spelling naturally.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="defense">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">Hold That Line</span><span class="badge b-sit">Defense</span></div>
+  <div class="lyrics">Saints, hold that line!
+Defense is doing fine!
+Push 'em back, push 'em back —
+Way back!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: T motion, stamp on "line"</span><span class="pill">Line 2: Broken T, slow and sharp</span><span class="pill">Line 3: Both arms push forward twice in rhythm</span><span class="pill">Line 4: Drop to Low V, one big stomp</span></div>
+  <div class="tip">Best used at a stoppage right before the defense takes the field/court. Short and punchy — gets done before play resumes.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="score">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">That's the Way</span><span class="badge b-sit">After a Score</span></div>
+  <div class="lyrics">That's the way, uh-huh uh-huh, we like it!
+Saints, uh-huh uh-huh — we like it!
+Gold and black, uh-huh uh-huh — we like it!
+Xavier, uh-huh uh-huh — alright!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">All lines: clap on each "uh-huh"</span><span class="pill">Alternate High V and T each line</span><span class="pill">Jump on "alright" if timing allows</span></div>
+  <div class="tip">High-energy celebration cheer. The crowd picks up the "uh-huh" pattern immediately — becomes crowd participation within one repetition.</div>
+</div>
+
+<div class="card" data-type="cheer" data-sit="score">
+  <div class="card-top"><span class="badge b-cheer">Cheer</span><span class="card-title">Saints on Fire</span><span class="badge b-sit">After a Score</span></div>
+  <div class="lyrics">Xavier's on fire — can't stop us now!
+Saints gonna win and we'll show you how!
+Black and gold, standing strong,
+Fighting hard all night long!</div>
+  <div class="motions-label">Motions by line</div>
+  <div class="pills"><span class="pill">Line 1: High V, sweep down to clasp on "now"</span><span class="pill">Line 2: Daggers, point forward on "show you how"</span><span class="pill">Line 3: T motion, hold strong</span><span class="pill">Line 4: March in place, finish High V</span></div>
+  <div class="tip">Use after a big score or momentum shift. Avoid in a close game — read the room first.</div>
+</div>
+
+<div class="sec-div" data-sec="chant">Chants — short, repeatable, for active play</div>
+
+<div class="card" data-type="chant" data-sit="defense">
+  <div class="card-top"><span class="badge b-chant">Chant</span><span class="card-title">Defense!</span><span class="badge b-sit">Defense</span></div>
+  <div class="lyrics">DEFENSE! [stomp stomp]
+DEFENSE! [stomp stomp]</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Clap on "DE-", fists punch up on "-FENSE"</span><span class="pill">Two stomps after each call</span><span class="pill">Repeat until possession changes</span></div>
+  <div class="tip">The simplest, most universally understood chant in sports. Teach this Day 1. The crowd joins immediately.</div>
+</div>
+
+<div class="card" data-type="chant" data-sit="offense">
+  <div class="card-top"><span class="badge b-chant">Chant</span><span class="card-title">Let's Go Xavier (5-clap)</span><span class="badge b-sit">Offense</span></div>
+  <div class="lyrics">LET'S GO XA-VIER [clap clap clap-clap-clap]
+LET'S GO XA-VIER [clap clap clap-clap-clap]</div>
+  <div class="motions-label">Clap pattern</div>
+  <div class="pills"><span class="pill">5-clap rhythm: CLAP CLAP · clap-clap-clap</span><span class="pill">T motion on "Let's Go"</span><span class="pill">High V on "Xavier"</span></div>
+  <div class="tip">The classic 5-clap pattern ("We Will Rock You" rhythm). Works for any sport, any moment. Crowd picks it up in one pass.</div>
+</div>
+
+<div class="card" data-type="chant" data-sit="offense">
+  <div class="card-top"><span class="badge b-chant">Chant</span><span class="card-title">Go Saints Go</span><span class="badge b-sit">Offense</span></div>
+  <div class="lyrics">GO! [clap] SAINTS! [clap] GO! [clap clap clap]
+GO! [clap] SAINTS! [clap] GO! [clap clap clap]</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Punch up on "GO" each time</span><span class="pill">T motion on "SAINTS"</span><span class="pill">Three fast claps to close</span></div>
+  <div class="tip">Short and punchy — fits in tight windows during active play. Easy for freshmen to execute at full energy.</div>
+</div>
+
+<div class="card" data-type="chant" data-sit="score">
+  <div class="card-top"><span class="badge b-chant">Chant</span><span class="card-title">Score Board</span><span class="badge b-sit">After a Score</span></div>
+  <div class="lyrics">SCORE-BOARD! [clap clap]
+SCORE-BOARD! [clap clap]</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Point to scoreboard on "SCORE-BOARD"</span><span class="pill">Two sharp claps after each call</span></div>
+  <div class="tip">Use ONLY when Xavier has a comfortable lead. Never in a close or comeback game — read the room.</div>
+</div>
+
+<div class="card" data-type="chant" data-sit="defense">
+  <div class="card-top"><span class="badge b-chant">Chant</span><span class="card-title">Block That Shot / Sack That Kick</span><span class="badge b-sit">Defense</span></div>
+  <div class="lyrics">BLOCK THAT SHOT! [clap clap]
+BLOCK THAT SHOT! [clap clap]
+(swap "SACK THAT KICK" for football)</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Arms sweep up like a block on "BLOCK"</span><span class="pill">T motion on "THAT"</span><span class="pill">Two claps to close</span></div>
+  <div class="tip">Learn both versions so cheerleaders can call the right one without hesitation depending on the sport.</div>
+</div>
+
+<div class="sec-div" data-sec="crowd">Crowd Builders — call and response</div>
+
+<div class="card" data-type="crowd" data-sit="intro">
+  <div class="card-top"><span class="badge b-crowd">Crowd Builder</span><span class="card-title">Saints Spell-Out</span><span class="badge b-sit">Opener</span></div>
+  <div class="lyrics">Cheer: Gimme an S! — Crowd: S!
+Cheer: Gimme an A! — Crowd: A!
+Cheer: Gimme an I! — Crowd: I!
+Cheer: Gimme an N! — Crowd: N!
+Cheer: Gimme a T!  — Crowd: T!
+Cheer: Gimme an S! — Crowd: S!
+Cheer: What's that spell? — Crowd: SAINTS!
+Cheer: SAINTS! — Crowd: SAINTS!</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Point to crowd on "Gimme a —"</span><span class="pill">Cup ear on "What's that spell?"</span><span class="pill">High V on final "SAINTS!"</span></div>
+  <div class="tip">Best used at game start or after a timeout when crowd energy is flat. Pace it slowly enough for the crowd to respond clearly.</div>
+</div>
+
+<div class="card" data-type="crowd" data-sit="intro">
+  <div class="card-top"><span class="badge b-crowd">Crowd Builder</span><span class="card-title">Who Are We?</span><span class="badge b-sit">Opener</span></div>
+  <div class="lyrics">Cheer: Who are we?     Crowd: The Saints!
+Cheer: Who are we?     Crowd: The Saints!
+Cheer: What are we gonna do tonight?
+Crowd: WIN!
+Cheer: I can't hear you —
+Crowd: WIN!
+Cheer: That's what I thought — SAINTS!</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Cup ear toward crowd each call</span><span class="pill">High V on crowd's "Saints" response</span><span class="pill">Touchdown arms on final "SAINTS!"</span></div>
+  <div class="tip">Great energy-builder when the crowd has gone quiet. The "I can't hear you" line reliably gets the crowd louder.</div>
+</div>
+
+<div class="card" data-type="crowd" data-sit="defense">
+  <div class="card-top"><span class="badge b-crowd">Crowd Builder</span><span class="card-title">Quiet / Loud (Noise Meter)</span><span class="badge b-sit">Defense</span></div>
+  <div class="lyrics">Cheer: On your feet! [pause for crowd to stand]
+Cheer: I need some NOISE!
+Cheer: When I say SAINTS, you say FIGHT —
+Cheer: SAINTS! — Crowd: FIGHT!
+Cheer: SAINTS! — Crowd: FIGHT!
+Cheer: When I say GO, you say WIN —
+Cheer: GO! — Crowd: WIN!
+Cheer: GO! — Crowd: WIN!</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Arms sweep up on "On your feet"</span><span class="pill">Cup hands to mouth on "I need some NOISE"</span><span class="pill">Alternate punches on each call</span></div>
+  <div class="tip">Use during a big defensive stand or before a critical possession. Getting the crowd on their feet amplifies volume significantly.</div>
+</div>
+
+<div class="card" data-type="crowd" data-sit="score">
+  <div class="card-top"><span class="badge b-crowd">Crowd Builder</span><span class="card-title">Feel the Spirit</span><span class="badge b-sit">After a Score</span></div>
+  <div class="lyrics">Cheer: Do you feel it?  Crowd: Yeah!
+Cheer: Do you feel it?  Crowd: Yeah!
+Cheer: Feel the spirit of the Saints — HEY!
+Crowd: HEY!
+Cheer: Feel the spirit of the Saints — HEY!
+Crowd: HEY!</div>
+  <div class="motions-label">Motions</div>
+  <div class="pills"><span class="pill">Hand on heart on "Do you feel it?"</span><span class="pill">Open arms wide on "spirit of the Saints"</span><span class="pill">Jump on "HEY!" if energy warrants</span></div>
+  <div class="tip">Celebratory and inclusive — great after a comeback score or big moment. Feels like school pride, not taunting.</div>
+</div>
+
+</div>
+
+<script>
+function filter(type, btn) {
+  document.querySelectorAll('.filt').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  const cards = document.querySelectorAll('.card');
+  let shown = 0;
+  cards.forEach(c => {
+    const t = c.dataset.type, s = c.dataset.sit;
+    let show = false;
+    if (type === 'all') show = true;
+    else if (['cheer','chant','crowd'].includes(type)) show = t === type;
+    else show = s === type;
+    c.classList.toggle('hidden', !show);
+    if (show) shown++;
+  });
+  // section dividers
+  document.querySelectorAll('.sec-div').forEach(d => {
+    const sec = d.dataset.sec;
+    const visible = [...document.querySelectorAll(`.card[data-type="${sec}"]:not(.hidden)`)].length;
+    d.style.display = (type === 'all' || type === sec || visible > 0) ? '' : 'none';
+  });
+  document.getElementById('count').textContent = shown + ' item' + (shown !== 1 ? 's' : '');
+}
+</script>
+</body>
+</html>

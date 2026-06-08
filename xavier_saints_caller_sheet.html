@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xavier Saints — Game-Day Caller Sheet</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #111; color: #f0f0f0; min-height: 100vh; }
+  .hdr { background: #000; border-bottom: 2px solid #827554; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .hdr-title { font-size: 16px; font-weight: 600; color: #fff; }
+  .hdr-sub { font-size: 12px; color: #827554; }
+  .back { font-size: 12px; color: #827554; text-decoration: none; padding: 4px 10px; border: 1px solid #4a4030; border-radius: 99px; }
+  .back:hover { background: #1a1a1a; }
+  .legend { display: flex; gap: 6px; flex-wrap: wrap; padding: 12px 16px 0; }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 99px; }
+  .b-cheer { background: #2a1e00; color: #a89060; border: 1px solid #4a4030; }
+  .b-chant { background: #1e1e1e; color: #888; border: 1px solid #333; }
+  .b-crowd { background: #0d3020; color: #60c090; border: 1px solid #1a6040; }
+  .b-never { background: #3d0d0d; color: #f08080; border: 1px solid #7a2a2a; }
+  .b-read  { background: #2a1800; color: #e0b060; border: 1px solid #6a4010; }
+  .wrap { padding: 12px 16px 60px; }
+  .section-hdr { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 8px 12px; border-radius: 8px; margin: 20px 0 8px; }
+  .s-pregame  { background: #000; color: #827554; border: 1px solid #4a4030; }
+  .s-offense  { background: #0a2a1a; color: #60c090; border: 1px solid #1a6040; }
+  .s-defense  { background: #1a1a1a; color: #bbb; border: 1px solid #333; }
+  .s-score    { background: #2a1e00; color: #a89060; border: 1px solid #4a4030; }
+  .s-comeback { background: #2a0d0d; color: #f08080; border: 1px solid #7a2a2a; }
+  .row { background: #141414; border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+  .row-inner { display: flex; gap: 0; }
+  .trigger { width: 150px; flex-shrink: 0; padding: 10px 12px; border-right: 1px solid #2a2a2a; font-size: 12px; color: #aaa; line-height: 1.4; display: flex; align-items: center; }
+  .calls { flex: 1; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+  .call-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+  .call-name { font-size: 13px; font-weight: 600; color: #fff; }
+  .call-note { font-size: 11px; color: #666; }
+  @media (max-width: 500px) { .trigger { width: 110px; font-size: 11px; } }
+  .rules { background: #0a0a0a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 14px 16px; margin-top: 24px; }
+  .rules-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #827554; margin-bottom: 10px; }
+  .rule { font-size: 12px; color: #888; padding: 5px 0; border-bottom: 1px solid #1a1a1a; line-height: 1.5; display: flex; gap: 8px; }
+  .rule:last-child { border-bottom: none; }
+  .rule-num { color: #827554; font-weight: 700; flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="hdr-title">Game-Day Caller Sheet — Xavier Saints</div>
+    <div class="hdr-sub">What to call, when to call it, what to avoid</div>
+  </div>
+  <a class="back" href="index.html">← Home</a>
+</div>
+
+<div class="legend">
+  <span class="badge b-cheer">Cheer</span>
+  <span class="badge b-chant">Chant</span>
+  <span class="badge b-crowd">Crowd Builder</span>
+  <span class="badge b-read">Read the Room</span>
+  <span class="badge b-never">Never</span>
+</div>
+
+<div class="wrap">
+
+<div class="section-hdr s-pregame">Pre-Game &amp; Warm-Ups</div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Teams warming up, 15–20 min before tip/kickoff</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">We Are the Saints</span><span class="call-note">First cheer of the night — sets the tone</span></div>
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Black and Gold</span><span class="call-note">Identity cheer, follow right after</span></div>
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Saints Spell-Out</span><span class="call-note">Gets crowd engaged before play starts</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Player intros / national anthem</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Who Are We?</span><span class="call-note">Build energy before first whistle</span></div>
+    <div class="call-line"><span class="badge b-never">Never</span><span class="call-name">Any cheer during the national anthem</span><span class="call-note">Stand silent at attention until it ends</span></div>
+  </div>
+</div></div>
+
+<div class="section-hdr s-offense">Offense — Xavier Has the Ball</div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Active play, dead ball, between plays</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-chant">Chant</span><span class="call-name">Let's Go Xavier</span><span class="call-note">5-clap pattern — go-to filler</span></div>
+    <div class="call-line"><span class="badge b-chant">Chant</span><span class="call-name">Go Saints Go</span><span class="call-note">Fits windows of 10 seconds or less</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Timeout called (either team)</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Let's Go, Saints!</span><span class="call-note">You have the time — full cheer</span></div>
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Victory Cheer</span><span class="call-note">Spelling cheer — crowd joins naturally</span></div>
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Who Are We?</span><span class="call-note">If crowd is flat — wake them up first</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Halftime</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Black and Gold</span><span class="call-note">Open the second half strong</span></div>
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Saints Spell-Out</span><span class="call-note">Re-energize crowd returning from break</span></div>
+  </div>
+</div></div>
+
+<div class="section-hdr s-defense">Defense — Opponent Has the Ball</div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Active defensive play in progress</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-chant">Chant</span><span class="call-name">Defense!</span><span class="call-note">Stomp-stomp — crowd joins instantly</span></div>
+    <div class="call-line"><span class="badge b-chant">Chant</span><span class="call-name">Block That Shot</span><span class="call-note">Swap "Sack That Kick" for football</span></div>
+    <div class="call-line"><span class="badge b-never">Never</span><span class="call-name">Full cheers during live play</span><span class="call-note">Chants only — cheers distract athletes</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Critical defensive possession — big moment</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Quiet / Loud (Noise Meter)</span><span class="call-note">Get crowd on their feet — max noise</span></div>
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Hold That Line</span><span class="call-note">Call at stoppage right before the play</span></div>
+  </div>
+</div></div>
+
+<div class="section-hdr s-score">After a Score — Xavier Scores</div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Xavier scores — close game</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">That's the Way</span><span class="call-note">Crowd joins the "uh-huh" pattern fast</span></div>
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Feel the Spirit</span><span class="call-note">Warm and inclusive — good for big moments</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Xavier scores — comfortable lead</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Saints on Fire</span><span class="call-note">High energy — save for dominant moments</span></div>
+    <div class="call-line"><span class="badge b-read">Read</span><span class="call-name">Score Board chant</span><span class="call-note">Comfortable lead ONLY — skip in a close game</span></div>
+  </div>
+</div></div>
+
+<div class="section-hdr s-comeback">Comeback / Momentum Shift — Xavier Is Down</div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">Team is losing — crowd is quiet</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-crowd">Crowd</span><span class="call-name">Quiet / Loud (Noise Meter)</span><span class="call-note">Best comeback tool — gets crowd on feet</span></div>
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Let's Go, Saints!</span><span class="call-note">Upbeat — right energy for a deficit</span></div>
+    <div class="call-line"><span class="badge b-never">Never</span><span class="call-name">Saints on Fire · Score Board · That's the Way</span><span class="call-note">Celebratory cheers land wrong when you're down</span></div>
+  </div>
+</div></div>
+<div class="row"><div class="row-inner">
+  <div class="trigger">End of game — win or loss</div>
+  <div class="calls">
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">We Are the Saints</span><span class="call-note">Win: close with identity and pride</span></div>
+    <div class="call-line"><span class="badge b-cheer">Cheer</span><span class="call-name">Black and Gold</span><span class="call-note">Loss: same cheer, same dignity — show class</span></div>
+    <div class="call-line"><span class="badge b-never">Never</span><span class="call-name">Taunting or opponent-directed chants</span><span class="call-note">Win or lose — always represent Xavier with class</span></div>
+  </div>
+</div></div>
+
+<div class="rules">
+  <div class="rules-title">Caller Rules — Review Before Every Game</div>
+  <div class="rule"><span class="rule-num">1.</span><span>CHANTS ONLY during live play — CHEERS only at stoppages and timeouts.</span></div>
+  <div class="rule"><span class="rule-num">2.</span><span>Read the score before calling anything celebratory (Score Board, Saints on Fire).</span></div>
+  <div class="rule"><span class="rule-num">3.</span><span>SILENT during: national anthem · free throws · player injuries.</span></div>
+  <div class="rule"><span class="rule-num">4.</span><span>Rotate — don't repeat the same cheer more than twice per half.</span></div>
+  <div class="rule"><span class="rule-num">5.</span><span>Crowd builders work best after a flat stretch — don't overuse them.</span></div>
+  <div class="rule"><span class="rule-num">6.</span><span>Win or lose — end every game with a team identity cheer.</span></div>
+</div>
+
+</div>
+</body>
+</html>
